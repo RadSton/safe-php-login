@@ -26,6 +26,9 @@ CREATE TABLE `users` (
   $loginsuccessful = "Login successful!";
   $checkpassword = "Check password or email!";
 
+
+  $whensuccess = "save.php"; // When the password is correct GOTO -> this site !
+
   // site
   $sitetitle = "Login";
   $seeall = true;
@@ -93,7 +96,7 @@ if(isset($_GET['login'])){
     // CHECK PASSWORD
     if (password_verify($userpassword, $user['passwort'])) {
         $_SESSION['user'] = $user;
-        echo  '<meta http-equiv="refresh" content=" ' . $delayatsuccessful . '; URL=login.php">';
+        echo  '<meta http-equiv="refresh" content=" ' . $delayatsuccessful . '; URL='. $whensuccess . '.php">';
       if($seeall == false)  die($loginsuccessful); else echo $loginsuccessful;
     } else {
       die($checkpassword);
@@ -116,6 +119,6 @@ if(isset($_GET['login'])){
 
 die();
  ?>
- 
+
 </body>
 </html>
