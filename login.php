@@ -10,14 +10,14 @@ CREATE TABLE `users` (
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 */
 // PHPmyAdmin data
-  $host = "localhost";
-  $dbname = "cloud";
-  $username_msq = "cloud_msq";
-  $password_msq = "ICOD2BjmhlYCz6PN";
+  $host = "your host"; // example: localhost
+  $dbname = "your databank"; // example: users
+  $username_msq = "your phpmyadmin username"; // example: root
+  $password_msq = "your phpmyadmin password"; // example: PaSsWoRd1234
 
 
   //CODE
-  $debug = true;
+  $debug = false;
     //FALSE = No debugs
     //TRUE = Console messages
 session_start();
